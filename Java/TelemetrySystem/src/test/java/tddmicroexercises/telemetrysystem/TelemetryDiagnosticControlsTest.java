@@ -2,14 +2,16 @@ package tddmicroexercises.telemetrysystem;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import tddmicroexercises.telemetrysystem.interfaces.Client;
+import tddmicroexercises.telemetrysystem.interfaces.Connection;
 import tddmicroexercises.telemetrysystem.services.ClientService;
 import tddmicroexercises.telemetrysystem.services.ConnectionService;
 import tddmicroexercises.telemetrysystem.services.TelemetryDiagnosticControls;
 
 public class TelemetryDiagnosticControlsTest {
 
-    ConnectionService connection = Mockito.mock(ConnectionService.class);
-    ClientService clientService = Mockito.mock(ClientService.class);
+    Connection connection = Mockito.mock(ConnectionService.class);
+    Client clientService = Mockito.mock(ClientService.class);
     TelemetryDiagnosticControls telemetryDiagnosticControls = new TelemetryDiagnosticControls(clientService, connection);
 
     @Test

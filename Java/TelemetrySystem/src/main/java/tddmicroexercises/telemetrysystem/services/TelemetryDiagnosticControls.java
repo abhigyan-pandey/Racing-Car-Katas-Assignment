@@ -1,18 +1,20 @@
 package tddmicroexercises.telemetrysystem.services;
 
+import tddmicroexercises.telemetrysystem.interfaces.Client;
+import tddmicroexercises.telemetrysystem.interfaces.Connection;
 import tddmicroexercises.telemetrysystem.interfaces.DiagnosticControls;
 
 public class TelemetryDiagnosticControls implements DiagnosticControls {
     private final String DiagnosticChannelConnectionString = "*111#";
-    private final ClientService clientService;
-    private final ConnectionService connectionService;
+    private final Client clientService;
+    private final Connection connectionService;
     private String diagnosticInfo = "";
 
     public String getDiagnosticInfo() {
         return diagnosticInfo;
     }
 
-    public TelemetryDiagnosticControls(ClientService clientService, ConnectionService connectionService) {
+    public TelemetryDiagnosticControls(Client clientService, Connection connectionService) {
         this.clientService = clientService;
         this.connectionService = connectionService;
     }
